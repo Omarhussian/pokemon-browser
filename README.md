@@ -56,6 +56,6 @@ npm run build
 
 ## 🙌 Credits & Live Demo
 
-- **Live Demo:** [https://pokemon-browser-xl38.vercel.app/](https://pokemon-browser-xl38.vercel.app/)
+- **Live Demo:** https://pokemon-browser-xl38.vercel.app/
 - **API:** [PokéAPI](https://pokeapi.co/) — Thank you for the free data!
 - **Developer:** Built with ❤️ by Me
