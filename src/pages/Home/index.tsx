@@ -2,11 +2,7 @@
 import  { useState } from 'react';
 import { useInfinitePokemonList } from '../../api/pokemon/useInfinitePokemonList';
 import { usePaginatedPokemonList } from '../../api/pokemon/usePaginatedPokemonList';
-import { Tabs } from '../../components/base/Tabs/Tabs';
-import { Pagination } from '../../components/base/Pagination/Pagination';
-import { PokemonCard } from '../../components/base/PokemonCard/PokemonCard';
-import { Loader } from '../../components/base/Loader/Loader';
-import { Error } from '../../components/base/Error/Error';
+import { Tabs, Pagination, PokemonCard, Loader, Error } from '../../components/base';
 import styles from './Home.module.scss';
 
 type ViewMode = 'pagination' | 'infinite';
