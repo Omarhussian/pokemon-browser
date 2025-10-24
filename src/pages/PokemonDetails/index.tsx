@@ -30,7 +30,7 @@ export const PokemonDetailsPage = () => {
     { name: 'Speed', value: pokemon.stats?.[5]?.base_stat || 0 },
   ];
 
-  const abilities = pokemon.abilities?.map((ability) => 
+  const abilities = pokemon.abilities?.map((ability: any) => 
     ability.is_hidden ? `${ability.ability.name} (Hidden)` : ability.ability.name
   ) || [];
   const primaryType = pokemon.types?.[0]?.type.name || 'unknown';

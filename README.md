@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# Pokémon Browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Pokémon browser built with **React + TypeScript + Vite**, featuring two list views (pagination & infinite scroll) and detailed Pokémon pages.  
+Uses the [PokéAPI](https://pokeapi.co/) for data, and is structured with scalable architecture for reuse and maintainability.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Browse all Pokémon with two UX variants:  
+  - **Pagination View** — classic page-by-page navigation  
+  - **Load More View** — infinite scroll or “Load More” button  
+- Detailed page for each Pokémon displaying:  
+  - Name  
+  - Sprite  
+  - Height & Weight  
+  - Types  
+- API layer built with **Axios** and **React Query** for efficient fetching, caching, and error handling  
+- Modern styling with **SCSS Modules**, global mixins, and variables  
+- Fully responsive across desktop, tablet, and mobile  
+- Clean, modular, type-safe architecture with clear separation of concerns  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** (functional components, hooks)  
+- **TypeScript** (strict typing for API responses)  
+- **Vite** (lightning-fast build & dev experience)  
+- **React Query** (@tanstack/react-query) for state management & caching  
+- **Axios** for API requests  
+- **SCSS Modules** for scoped, maintainable styling  
+- **React Router** for routing between pages  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🎬 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# 1. Clone the Repository
+git clone https://github.com/Omarhussian/pokemon-browser.git
+cd pokemon-browser
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 2. Install Dependencies
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 3. Start the Development Server
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 4. Open in your browser
+http://localhost:5173
+# Create a production build
+npm run build
+
+# Preview the production build locally
+npm run preview

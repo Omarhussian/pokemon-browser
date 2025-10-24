@@ -6,7 +6,7 @@ export const useInfinitePokemonList = (limit: number) => {
   return useInfiniteQuery<PokemonListResponse>({
     queryKey: ["pokemonListInfinite", limit],
     queryFn: ({ pageParam = 0 }) => fetchPokemonList(limit, pageParam as number),
-    getNextPageParam: (lastPage, allPages) => {
+    getNextPageParam: (lastPage: PokemonListResponse, allPages: PokemonListResponse[]) => {
       const nextOffset = allPages.length * limit;
       return lastPage.next ? nextOffset : undefined;
     },

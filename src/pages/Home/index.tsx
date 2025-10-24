@@ -105,7 +105,7 @@ export const HomePage = () => {
       return <Error message="No Pokemon data available" />;
     }
 
-    const allPokemon = infiniteQuery.data.pages.flatMap(page => page.results);
+    const allPokemon = infiniteQuery.data.pages.flatMap((page: any) => page.results);
     const totalLoaded = allPokemon.length;
 
     return (
