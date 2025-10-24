@@ -1,0 +1,45 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imageWrapper {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.image {
+  max-width:300px;
+  max-height:300px;
+  object-fit: contain;
+}
+
+.typeTag {
+  background: $background;
+  // there are 310 pokemon abilities so that why i choose a genral background color for the type tag :)
+  color: $text-secondary;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: $font-weight-medium;
+  text-transform: capitalize;
+  font-size: $font-size-sm;
+}
+
+@include mobile {
+  .imageWrapper {
+    width: 150px;
+    height: 150px;
+  }
+}

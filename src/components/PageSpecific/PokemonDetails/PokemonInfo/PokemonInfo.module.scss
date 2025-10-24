@@ -1,0 +1,61 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: $radius-lg;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius:$radius;
+}
+
+.infoIcon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $background;
+  border-radius: 50%;
+  color: white;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoLabel {
+  font-size: $font-size-sm;
+  color: $text;
+  font-weight: $font-weight-medium;
+}
+
+.infoValue {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text;
+}
+
+@include mobile {
+  .infoContainer {
+    padding: 1rem;
+  }
+  
+  .infoItem {
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+}

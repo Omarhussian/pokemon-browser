@@ -20,7 +20,7 @@
   border: 1px solid $primary;
   background: white;
   color: $primary;
-  border-radius: 4px;
+  border-radius: $radius-sm;
   cursor: pointer;
   transition: all 0.2s ease;
 
@@ -45,7 +45,7 @@
   border: 1px solid $primary;
   background: white;
   color: $primary;
-  border-radius: 4px;
+  border-radius: $radius-sm;
   cursor: pointer;
   transition: all 0.2s ease;
 

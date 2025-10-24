@@ -1,0 +1,69 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.details {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backButton {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.backLink {
+  color: $text;
+  text-decoration: none;
+  font-weight: $font-weight-medium;
+  padding: 0.5rem 1rem;
+  border-radius: $radius;
+  background: rgba(255, 255, 255, 0.8);
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+}
+
+.card {
+  background: $card-bg;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+}
+
+@include mobile {
+  .details {
+    padding: 1rem;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}

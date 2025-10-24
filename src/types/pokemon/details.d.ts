@@ -4,16 +4,33 @@ export interface PokemonDetailType {
       name: string;
     };
   }
-  
-  export interface PokemonSprites {
-    front_default: string;
-  }
-  
-  export interface PokemonDetail {
-    id: number;
+
+export interface PokemonStat {
+  base_stat: number;
+  stat: {
     name: string;
-    height: number;
-    weight: number;
-    sprites: PokemonSprites;
-    types: PokemonDetailType[];
-  }
+  };
+}
+
+export interface PokemonAbility {
+  ability: {
+    name: string;
+  };
+  is_hidden: boolean;
+}
+  
+export interface PokemonSprites {
+  front_default: string;
+}
+
+export interface PokemonDetail {
+  id: number;
+  name: string;
+  height: number;
+  weight: number;
+  base_experience: number;
+  sprites: PokemonSprites;
+  types: PokemonDetailType[];
+  stats: PokemonStat[];
+  abilities: PokemonAbility[];
+}
